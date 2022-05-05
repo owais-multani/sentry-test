@@ -5,7 +5,6 @@ import CompactSelect from 'sentry/components/forms/compactSelect';
 import SearchBar from 'sentry/components/searchBar';
 import {t, tn} from 'sentry/locale';
 import space from 'sentry/styles/space';
-import {defined} from 'sentry/utils';
 
 type FilterOptions = React.ComponentProps<typeof CompactSelect>['options'];
 
@@ -59,7 +58,7 @@ function SearchBarAction({
         onChange={onChange}
         query={query}
         placeholder={placeholder}
-        blendWithFilter={defined(filterOptions)}
+        blendWithFilter={!!filterOptions}
       />
     </Wrapper>
   );
