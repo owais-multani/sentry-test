@@ -6,16 +6,20 @@ import SearchBar from 'sentry/components/searchBar';
 import {t, tn} from 'sentry/locale';
 import space from 'sentry/styles/space';
 
-type FilterOptions = React.ComponentProps<typeof CompactSelect>['options'];
+type FilterOptionsProp = React.ComponentProps<typeof CompactSelect>['options'];
+
+type FilterOption = NonNullable<FilterOptionsProp>[0] & {
+  leadingItems?: React.ReactNode;
+};
 
 type Props = {
   onChange: (value: string) => void;
   placeholder: string;
   query: string;
   className?: string;
-  filterOptions?: FilterOptions;
-  onFilterChange?: (options: FilterOptions) => void;
-  selectedFilters?: FilterOptions;
+  filterOptions?: FilterOption[];
+  onFilterChange?: (options: FilterOption[]) => void;
+  selectedFilters?: FilterOption[];
 };
 
 function SearchBarAction({
