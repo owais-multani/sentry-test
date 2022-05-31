@@ -6,11 +6,7 @@ import SearchBar from 'sentry/components/searchBar';
 import {t, tn} from 'sentry/locale';
 import space from 'sentry/styles/space';
 
-type FilterOptionsProp = React.ComponentProps<typeof CompactSelect>['options'];
-
-type FilterOption = NonNullable<FilterOptionsProp>[0] & {
-  leadingItems?: React.ReactNode;
-};
+type FilterOption = React.ComponentProps<typeof CompactSelect>['options'][0];
 
 type Props = {
   onChange: (value: string) => void;
