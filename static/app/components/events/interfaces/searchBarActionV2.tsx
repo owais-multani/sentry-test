@@ -74,6 +74,14 @@ const Wrapper = styled('div')`
   @media (max-width: ${props => props.theme.breakpoints[0]}) {
     margin-top: ${space(1)};
   }
+
+  @media (min-width: ${props => props.theme.breakpoints[1]}) {
+    width: 400px;
+  }
+
+  @media (min-width: ${props => props.theme.breakpoints[3]}) {
+    width: 600px;
+  }
 `;
 
 // TODO(matej): remove this once we refactor SearchBar to not use css classes
