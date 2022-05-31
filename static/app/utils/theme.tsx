@@ -309,9 +309,9 @@ const generateAliases = (colors: BaseColors) => ({
    */
   searchTokenBackground: {
     valid: colors.blue100,
-    validActive: color(colors.blue100).opaquer(0.2).string(),
+    validActive: color(colors.blue100).opaquer(0.8).string(),
     invalid: colors.red100,
-    invalidActive: color(colors.red100).opaquer(0.2).string(),
+    invalidActive: color(colors.red100).opaquer(0.8).string(),
   },
 
   /**
@@ -319,9 +319,9 @@ const generateAliases = (colors: BaseColors) => ({
    */
   searchTokenBorder: {
     valid: colors.blue200,
-    validActive: color(colors.blue200).opaquer(0.4).string(),
+    validActive: color(colors.blue200).opaquer(1).string(),
     invalid: colors.red200,
-    invalidActive: color(colors.red200).opaquer(0.4).string(),
+    invalidActive: color(colors.red200).opaquer(1).string(),
   },
 
   /**
