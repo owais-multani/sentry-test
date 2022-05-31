@@ -92,22 +92,20 @@ const StyledSearchBar = styled(SearchBar)<{blendWithFilter?: boolean}>`
     align-items: center;
   }
 
-  @media (min-width: ${props => props.theme.breakpoints[0]}) {
-    ${p =>
-      p.blendWithFilter &&
-      `
-        .search-input,
-        .search-input:focus {
-          border-top-left-radius: 0;
-          border-bottom-left-radius: 0;
-        }
-      `}
-  }
+  ${p =>
+    p.blendWithFilter &&
+    `
+      .search-input,
+      .search-input:focus {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        border-left: 0;
+      }
+    `}
 `;
 
 const StyledTrigger = styled(DropdownButtonV2)`
   display: inline-block;
   border-radius: ${p => p.theme.borderRadiusLeft};
-  transform: translateX(2px);
   z-index: 0;
 `;
