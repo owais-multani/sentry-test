@@ -14,8 +14,8 @@ type Props = {
   query: string;
   className?: string;
   filterOptions?: FilterOption[];
+  filterSelections?: FilterOption[];
   onFilterChange?: (options: FilterOption[]) => void;
-  selectedFilters?: FilterOption[];
 };
 
 function SearchBarAction({
@@ -23,7 +23,7 @@ function SearchBarAction({
   query,
   placeholder,
   filterOptions,
-  selectedFilters,
+  filterSelections,
   onFilterChange,
   className,
 }: Props) {
@@ -31,12 +31,12 @@ function SearchBarAction({
     return (
       <StyledTrigger
         size="small"
-        priority={selectedFilters && selectedFilters.length > 0 ? 'primary' : 'default'}
+        priority={filterSelections && filterSelections.length > 0 ? 'primary' : 'default'}
         ref={ref}
         {...props}
       >
-        {selectedFilters?.length
-          ? tn('%s Active Filter', '%s Active Filters', selectedFilters.length)
+        {filterSelections?.length
+          ? tn('%s Active Filter', '%s Active Filters', filterSelections.length)
           : t('Filter By')}
       </StyledTrigger>
     );
@@ -49,7 +49,7 @@ function SearchBarAction({
           multiple
           maxMenuHeight={400}
           options={filterOptions}
-          value={selectedFilters?.map(f => f.value)}
+          value={filterSelections?.map(f => f.value)}
           onChange={onFilterChange}
           trigger={trigger}
         />
