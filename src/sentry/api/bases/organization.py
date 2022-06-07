@@ -341,7 +341,18 @@ class OrganizationEndpoint(Endpoint):
 
         return params
 
-    def convert_args(self, request: Request, organization_slug, *args, **kwargs):
+    def convert_args(self, request: Request, *args, **kwargs):
+        organization_slug_param = kwargs.pop("organization_slug", None)
+
+        organization_slug = None
+        if organization_slug_param:
+            organization_slug = organization_slug_param
+        elif request.subdomain:
+            organization_slug = request.subdomain
+
+        if not organization_slug:
+            raise ResourceDoesNotExist
+
         try:
             organization = Organization.objects.get_from_cache(slug=organization_slug)
         except Organization.DoesNotExist:
