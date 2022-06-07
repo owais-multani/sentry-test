@@ -599,7 +599,6 @@ class DashboardDetail extends Component<Props, State> {
     return (
       <PageFiltersContainer
         skipLoadLastUsed={organization.features.includes('global-views')}
-        hideGlobalHeader
         defaultSelection={{
           datetime: {
             start: null,
@@ -687,7 +686,6 @@ class DashboardDetail extends Component<Props, State> {
       <SentryDocumentTitle title={dashboard.title} orgSlug={organization.slug}>
         <PageFiltersContainer
           skipLoadLastUsed={organization.features.includes('global-views')}
-          hideGlobalHeader
           defaultSelection={{
             datetime: {
               start: null,
