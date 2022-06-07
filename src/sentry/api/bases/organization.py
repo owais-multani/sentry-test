@@ -341,13 +341,10 @@ class OrganizationEndpoint(Endpoint):
 
         return params
 
-    def convert_args(self, request: Request, *args, **kwargs):
-        organization_slug_param = kwargs.pop("organization_slug", None)
-
-        organization_slug = None
-        if organization_slug_param:
-            organization_slug = organization_slug_param
-        elif request.subdomain:
+    def convert_args(self, request: Request, organization_slug=None, *args, **kwargs):
+        # Parse request.subdomain as an organization_slug by default. In the future, we may perform further processing
+        # on request.subdomain to parse additional context such as requested regions.
+        if organization_slug is None and request.subdomain is not None:
             organization_slug = request.subdomain
 
         if not organization_slug:
