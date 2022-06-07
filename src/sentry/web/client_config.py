@@ -189,6 +189,8 @@ def get_client_config(request=None):
         # TODO: to be implemented in the future when customer domain work evolves
         "sentryUrl": options.get("system.url-prefix"),
         "organizationUrl": options.get("system.url-prefix"),
+        # This is used as a basis to construct organizationUrls
+        "organizationBaseUrl": options.get("system.url-prefix"),
     }
     if user and user.is_authenticated:
         context.update(
