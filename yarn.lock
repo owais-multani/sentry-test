@@ -2877,12 +2877,11 @@
     "@react-types/overlays" "^3.5.1"
     "@react-types/shared" "^3.8.0"
 
-"@sentry-internal/global-search@^0.2.2":
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/@sentry-internal/global-search/-/global-search-0.2.2.tgz#4f57c2cf251df882b432e689ab029af1210095e0"
-  integrity sha512-BJUSPXA/MOx8WnfAa7AOfXInNl9Mu6OGz1V8TV9QkMRJZ6yMpV9RTBDaOdi77wS6aAt7rPFidw74KpKwex8ALw==
+"@sentry-internal/global-search@^0.5.4":
+  version "0.5.4"
+  resolved "https://registry.yarnpkg.com/@sentry-internal/global-search/-/global-search-0.5.4.tgz#5a78e4d8dcdb8c957e5bfd8054129bbf1a100018"
+  integrity sha512-feNMla0ybWr7AsbpGK4+scKotrF7c6f8y7sQJBYfwifDyaynZlnpf836CMYMgbWQP1Avvs5KcagppdCZ7fFQDA==
   dependencies:
-    "@types/dompurify" "^2.0.4"
     "@types/react" ">=16"
     "@types/react-dom" ">=16"
     algoliasearch "^4.13.1"
@@ -4130,7 +4129,7 @@
   resolved "https://registry.yarnpkg.com/@types/diff/-/diff-5.0.2.tgz#dd565e0086ccf8bc6522c6ebafd8a3125c91c12b"
   integrity sha512-uw8eYMIReOwstQ0QKF0sICefSy8cNO/v7gOTiIy9SbwuHyEecJUm7qlgueOO5S1udZ5I/irVydHVwMchgzbKTg==
 
-"@types/dompurify@^2.0.4", "@types/dompurify@^2.3.3":
+"@types/dompurify@^2.3.3":
   version "2.3.3"
   resolved "https://registry.yarnpkg.com/@types/dompurify/-/dompurify-2.3.3.tgz#c24c92f698f77ed9cc9d9fa7888f90cf2bfaa23f"
   integrity sha512-nnVQSgRVuZ/843oAfhA25eRSNzUFcBPk/LOiw5gm8mD9/X7CNcbRkQu/OsjCewO8+VIYfPxUnXvPEVGenw14+w==
