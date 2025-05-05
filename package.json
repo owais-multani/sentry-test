@@ -37,7 +37,7 @@
     "@types/color": "^3.0.3",
     "@types/diff": "5.0.2",
     "@types/dompurify": "^2.3.3",
-    "@types/enzyme": "^3.10.12",
+    "@types/enzyme": "^3.10.19",
     "@types/jest": "^28.1.0",
     "@types/js-cookie": "^3.0.2",
     "@types/lodash": "^4.14.182",
