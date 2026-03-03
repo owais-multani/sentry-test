@@ -10582,6 +10582,11 @@ less-loader@^11.0.0:
   dependencies:
     klona "^2.0.4"
 
+less-loader@^12.3.1:
+  version "12.3.1"
+  resolved "https://registry.yarnpkg.com/less-loader/-/less-loader-12.3.1.tgz#4b80179507d522fa3082c19a09d08e50b9495ac3"
+  integrity sha512-JZZmG7gMzoDP3VGeEG8Sh6FW5wygB5jYL7Wp29FFihuRTsIBacqO3LbRPr2yStYD11riVf13selLm/CPFRDBRQ==
+
 less@^4.1.2:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/less/-/less-4.1.2.tgz#6099ee584999750c2624b65f80145f8674e4b4b0"
